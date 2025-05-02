@@ -1,40 +1,21 @@
-<div class="slide {{ $active ? 'active' : '' }} bg-white rounded-xl shadow-xl p-8">
-    <h2 class="text-3xl font-bold mb-4 slide-title">Tabla resumen de hooks</h2>
-    <table class="min-w-full bg-white border border-gray-300 mb-4">
-        <thead>
-            <tr>
-                <th class="py-2 px-4 border-b">Hook</th>
-                <th class="py-2 px-4 border-b">Función principal</th>
-                <th class="py-2 px-4 border-b">Devuelve</th>
-                <th class="py-2 px-4 border-b">Ejemplo</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="py-2 px-4 border-b">useRouter()</td>
-                <td class="py-2 px-4 border-b">Control de navegación</td>
-                <td class="py-2 px-4 border-b">Objeto con métodos</td>
-                <td class="py-2 px-4 border-b">router.push('/home')</td>
-            </tr>
-            <tr>
-                <td class="py-2 px-4 border-b">useSegments()</td>
-                <td class="py-2 px-4 border-b">Obtener segmentos de URL</td>
-                <td class="py-2 px-4 border-b">Array</td>
-                <td class="py-2 px-4 border-b">['blog', 'post']</td>
-            </tr>
-            <tr>
-                <td class="py-2 px-4 border-b">usePathname()</td>
-                <td class="py-2 px-4 border-b">Ruta activa sin parámetros</td>
-                <td class="py-2 px-4 border-b">String</td>
-                <td class="py-2 px-4 border-b">'/perfil/editar'</td>
-            </tr>
-            <tr>
-                <td class="py-2 px-4 border-b">useQuery()</td>
-                <td class="py-2 px-4 border-b">Parámetros de consulta</td>
-                <td class="py-2 px-4 border-b">Objeto clave-valor</td>
-                <td class="py-2 px-4 border-b">{ id: '42' }</td>
-            </tr>
-        </tbody>
-    </table>
-    <p class="text-base text-gray-500">Consulta la <a href="https://docs.expo.dev/router/introduction/" class="text-indigo-600 underline" target="_blank">documentación oficial</a> para más detalles y ejemplos.</p>
-</div> 
+<div class="slide bg-white rounded-xl shadow-xl p-8">
+    <h2 class="text-3xl font-bold mb-4 slide-title">Hook <span class="text-indigo-600">usePathname()</span> en React Native</h2>
+    <p class="text-xl mb-2">Devuelve la ruta activa (sin parámetros de consulta) en tu app móvil.</p>
+    <div class="code-block"><button class="copy-btn" onclick="copyCode(this)">Copiar</button><pre><code class="language-jsx">import { View, Text } from 'react-native';
+import { usePathname } from 'expo-router';
+
+export default function PathnameScreen() {
+const pathname = usePathname();
+
+return (
+<View>
+<Text>Ruta actual: {pathname}</Text>
+</View>
+);
+}</code></pre></div>
+    <ul class="list-disc pl-6 text-base text-gray-700 mb-2">
+        <li>Para adaptar la UI según la ruta</li>
+        <li>Mostrar títulos o breadcrumbs dinámicos</li>
+        <li>Aplicar estilos o animaciones según la pantalla</li>
+    </ul>
+</div>

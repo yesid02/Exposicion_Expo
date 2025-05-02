@@ -1,7 +1,7 @@
-<div class="slide {{ $active ? 'active' : '' }} bg-white rounded-xl shadow-xl p-8">
-    <h2 class="text-3xl font-bold mb-4 slide-title">Ejecutar la aplicación</h2>
-    <p class="text-xl mb-2">Una vez configurado el router, puedes iniciar tu app con:</p>
-    <div class="code-block"><pre><code class="language-bash">npx expo start</code></pre></div>
-    <p class="text-lg mt-2">Esto abrirá el servidor de desarrollo de Expo y podrás ver tu app en un emulador o dispositivo físico.</p>
-    <p class="text-base text-gray-500 mt-2">Expo Router detecta automáticamente las rutas según la estructura de carpetas en <b>/app</b>.</p>
-</div> 
+<div class="slide bg-white rounded-xl shadow-xl p-8">
+    <h2 class="text-3xl font-bold mb-4 slide-title">Ejecutar la app en React Native</h2>
+    <p class="text-xl mb-2">Inicia tu app móvil con el router activo:</p>
+    <div class="code-block"><button class="copy-btn" onclick="copyCode(this)">Copiar</button><pre><code class="language-bash">npx expo start</code></pre></div>
+    <div class="tip"><svg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z' /></svg>Puedes probar la app en tu móvil con Expo Go escaneando el QR.</div>
+    <a href="https://docs.expo.dev/workflow/expo-cli/" target="_blank" class="resource-link">Más sobre Expo CLI</a>
+</div>

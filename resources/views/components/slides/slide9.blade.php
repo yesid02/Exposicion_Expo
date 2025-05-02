@@ -1,14 +1,21 @@
-<div class="slide {{ $active ? 'active' : '' }} bg-white rounded-xl shadow-xl p-8">
-    <h2 class="text-3xl font-bold mb-6 slide-title">Prueba tu código</h2>
-    <div class="code-editor">
-        <div class="code-editor-header">
-            <span>index.js</span>
-            <button onclick="window.runCode()" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">
-                Ejecutar
-            </button>
-        </div>
-        <div class="code-editor-content">
-            <textarea id="codeInput" placeholder="// Escribe tu código aquí...&#10;// Ejemplo:&#10;import { useRouter } from 'expo-router';&#10;&#10;export default function Home() {&#10;  const router = useRouter();&#10;  &#10;  return (&#10;    &lt;View&gt;&#10;      &lt;Text&gt;Hola Mundo&lt;/Text&gt;&#10;    &lt;/View&gt;&#10;  );&#10;}" spellcheck="false"></textarea>
-        </div>
-    </div>
-</div> 
+<div class="slide bg-white rounded-xl shadow-xl p-8">
+    <h2 class="text-3xl font-bold mb-4 slide-title">Hook <span class="text-indigo-600">useQuery()</span> en React Native</h2>
+    <p class="text-xl mb-2">Accede a los parámetros de consulta (query params) de la URL en tu app móvil.</p>
+    <div class="code-block"><button class="copy-btn" onclick="copyCode(this)">Copiar</button><pre><code class="language-jsx">import { View, Text } from 'react-native';
+import { useQuery } from 'expo-router';
+
+export default function ProductoScreen() {
+const { id } = useQuery();
+
+return (
+<View>
+<Text>ID del producto: {id}</Text>
+</View>
+);
+}</code></pre></div>
+    <ul class="list-disc pl-6 text-base text-gray-700 mb-2">
+        <li>Filtrar o buscar datos en la pantalla actual</li>
+        <li>Obtener parámetros para peticiones a APIs</li>
+        <li>Personalizar la experiencia del usuario</li>
+    </ul>
+</div>
